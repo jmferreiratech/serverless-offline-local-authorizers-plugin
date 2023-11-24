@@ -2,11 +2,6 @@
   "name": "serverless-offline-local-authorizers-plugin",
   "version": "1.3.0",
   "main": "./dist/index.js",
-  "scripts": {
-    "tsc": "./node_modules/typescript/bin/tsc",
-    "install": "npm install",
-    "postinstall": "npm run tsc"
-  },
   "files": [
     "dist",
     "package.json",
