@@ -107,7 +107,7 @@ export class AwsLocalAuthorizerPlugin {
             this.serverless.service.functions[functionKey] = {
                 memorySize: 256,
                 timeout: 30,
-                handler: `${filePath.split('.')[0]}.${name}`,
+                handler: `${filePath.replace(/\.\w+$/, "")}.${name}`,
                 events: [],
                 name: `${this.serverless.service.service}-${this.options.stage}-authorizer${name}`,
                 package:{
